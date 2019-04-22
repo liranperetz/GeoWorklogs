@@ -11,4 +11,5 @@
     <string name="configure_work_address_hint">Type your work address here</string>
     <string name="pick_address_dialog_title">Pick address</string>
     <string name="save">Save</string>
+    <string name="work_log_summary">Date: %s, time at work: %s</string>
 </resources>

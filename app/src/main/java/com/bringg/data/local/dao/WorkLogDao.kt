@@ -25,4 +25,9 @@ interface WorkLogDao {
     )
     fun getLastOpened(workAddressId: Int): WorkLog?
 
+    @Query(
+        "SELECT * FROM ${WorkLog.TABLE_NAME} WHERE ${WorkLog.FIELD_ARRIVED} BETWEEN :from AND :to ORDER BY ${WorkLog.FIELD_ID} DESC"
+    )
+    fun getDateSummary(from: Long, to: Long): LiveData<List<WorkLog>>
+
 }

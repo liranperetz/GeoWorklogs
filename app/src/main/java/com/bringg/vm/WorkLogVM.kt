@@ -15,9 +15,6 @@ class WorkLogVM(application: Application) : AndroidViewModel(application) {
 
     private val dao = db.workLogDao
 
-    /**
-     * Get all work logs
-     */
-    fun getAll() : LiveData<List<WorkLog>> = dao.getAll()
+    fun getDateSummary(from: Long, to: Long): LiveData<List<WorkLog>> = dao.getDateSummary(from, to)
 
 }

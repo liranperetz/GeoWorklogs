@@ -18,8 +18,11 @@ data class WorkLog(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = FIELD_ID)
     val id: Int = 0,
+    @ColumnInfo(name = FIELD_ARRIVED)
     val arrivedAt: Long = 0,
+    @ColumnInfo(name = FIELD_LEAVED)
     var leavedAt: Long = 0,
+    @ColumnInfo(name = FIELD_DWELL_TIME)
     var dwellTime: Long = 0,
     @ColumnInfo(name = FIELD_WORK_ADDRESS)
     val workAddress: Int
@@ -47,6 +50,8 @@ data class WorkLog(
         const val TABLE_NAME = "WorkLog"
         const val FIELD_ID = "_id"
         const val FIELD_WORK_ADDRESS = "WorkAddress"
-        const val FIELD_DWELL_TIME = "dwellTime"
+        const val FIELD_DWELL_TIME = "DwellTime"
+        const val FIELD_ARRIVED = "ArrivedAt"
+        const val FIELD_LEAVED = "LeavedAt"
     }
 }
